@@ -1,0 +1,13 @@
+{
+  "liveSassCompile.settings.formats": [{
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "/resources/css/"
+  }],
+  "liveServer.settings.multiRootWorkspaceName": "exchange_rate",
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+  ],
+  "liveSassCompile.settings.autoprefix": null,
+}

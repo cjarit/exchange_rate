@@ -1,0 +1,124 @@
+@mixin breakpoint($class) {
+
+  @if $class == xxs {
+    @media (max-width: 575px) { @content; }
+  }
+
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == max-sm {
+    @media (max-width: 991px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == max-md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else if $class == max-lg {
+    @media (max-width: 1199px) { @content; }
+  }
+
+  @else if $class == ex-lg {
+    @media (min-width: 1400px) { @content; }
+  }
+
+  @else if $class == max-ex-lg {
+    @media (max-width: 1399px) { @content; }
+  }
+  
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin kt-font {
+  font-family: 'Krungthai';
+}
+
+@mixin kt-font-b {
+  font-family: 'KrungthaiBold';
+}
+
+@mixin kt-font-ex-b {
+  font-family: "KrungthaiExBold";
+}
+
+@mixin kt-font-i {
+  font-family: "KrungthaiItalic";
+}
+
+@mixin system-font {
+  font-family: sans-serif!important;
+  //font-size: 0.8125rem;
+  font-weight: lighter;
+}
+
+@mixin d-flex {
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  display: flex;
+}
+
+@mixin flex-all-cen {
+  @include d-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+  -ms-animation: $content;
+  -o-animation: $content;
+}
+
+@mixin transform($param) {
+  -webkit-transform: $param;
+  -moz-transform: $param;
+  transform: $param;
+}
+
+@mixin flexflow($param) {
+  -webkit-flex-flow: $param;
+  flex-flow: $param;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin input-placeholder {
+  .placeholder { @content; }
+  :-moz-placeholder { @content; }
+  ::-moz-placeholder { @content; }
+  :-ms-input-placeholder { @content; }
+  ::-webkit-input-placeholder { @content; }
+}
