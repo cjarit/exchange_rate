@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="icon" href="resources/img/ex_rate_favicon.png" sizes="32x32">
+  <!-- <link rel="icon" href="resources/img/mc-favicon.png" sizes="32x32"> -->
   <title>Exchange Rate | Admin</title>
   <link rel="stylesheet" href="./vendors/antdesign/antd.css" />
   <link rel="stylesheet" href="./vendors/antdesign/iconfont/iconfont.css" />
@@ -42,7 +42,7 @@
         <div class="ant-layout-sider-children">
           <!-- Menu -->
           <ul class="ant-menu ant-menu-light ant-menu-root ant-menu-inline c-menu-sider" role="menu">
-            <li class="ant-menu-item ant-menu-item-selected" role="menuitem">
+            <li class="ant-menu-item" role="menuitem">
               <span>Home</span>
               <!-- Customise Icon -->
               <i class="anticon icon-home c-icon-menu"></i>
@@ -83,7 +83,7 @@
             <li class="ant-menu-item" role="menuitem">
               <span>Currency Setup</span>
             </li>
-            <li class="ant-menu-item" role="menuitem">
+            <li class="ant-menu-item  ant-menu-item-selected" role="menuitem">
               <span>E-mail Setup</span>
             </li>
             <li>
@@ -100,138 +100,11 @@
       <!-- Layout -->
       <div class="ant-layout c-layout c-layout-working-space">
         <!-- Content -->
-        <!-- Setup max-width min-width for unnecessary responsive -->
-        <div class="ant-layout-content c-layout-content" style="max-width: 1620px; min-width: 1200px;">
+        <div class="ant-layout-content c-layout-content">
           <!-- <Row type="flex" justify="start"> -->
           <div class="ant-row-flex ant-row-flex-start c-layout-row">
             <h1 class="c-layout-title">Banknote Setup</h1>
           </div>
-          <!-- Setup max-width min-width for unnecessary responsive -->
-          <div class="c-layout-row" style="max-width: 900px; min-width: 800px; padding-bottom: 0;">
-            <!-- <Form> -->
-            <form class="ant-form ant-form-horizontal c-ant-form">
-              <div class="c-form-row">
-                <!-- <Col> -->
-                <div class="ant-col-12 c-col-padding">
-                  <!-- <FormItem>] -->
-                  <div class="ant-row ant-form-item" style="margin-bottom: 8px;">
-                    <div class="ant-form-item-label ant-col-xs-8">
-                      <label for="" title="">
-                        Input text
-                      </label>
-                    </div>
-                    <div class="ant-form-item-control-wrapper ant-col-xs-16">
-                      <div class="ant-form-item-control">
-                        <span class="ant-form-item-children">
-                          <input type="" id="" class="ant-input" value="">
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <Col> -->
-                <div class="ant-col-12 c-col-padding">
-                  <!-- <FormItem>] -->
-                  <div class="ant-row ant-form-item" style="margin-bottom: 8px;">
-                    <div class="ant-form-item-label ant-col-xs-8">
-                      <label for="" title="">
-                        Text only
-                      </label>
-                    </div>
-                    <div class="ant-form-item-control-wrapper ant-col-xs-16">
-                      <div class="ant-form-item-control">
-                        <span class="ant-form-item-children">
-                          <span class="ant-form-text">Show Text</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <Col> -->
-                <div class="ant-col-12 c-col-padding">
-                  <!-- <FormItem>] -->
-                  <div class="ant-row ant-form-item" style="margin-bottom: 8px;">
-                    <div class="ant-form-item-label ant-col-xs-8">
-                      <label for="" title="">
-                        Select Date
-                      </label>
-                    </div>
-                    <div class="ant-form-item-control-wrapper ant-col-xs-16">
-                      <div class="ant-form-item-control">
-                        <span class="ant-form-item-children">
-                          <span id="date-picker" class="ant-calendar-picker" style="width: 100%;">
-                            <div>
-                              <input readonly="" placeholder="Select date" class="ant-calendar-picker-input ant-input"
-                                value="">
-                              <i class="anticon anticon-calendar ant-calendar-picker-icon">
-                                <svg viewBox="64 64 896 896" class="" data-icon="calendar" width="1em" height="1em"
-                                  fill="currentColor" aria-hidden="true">
-                                  <path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"></path>
-                                </svg>
-                              </i>
-                            </div>
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <Col> -->
-                <div class="ant-col-12 c-col-padding">
-                  <!-- <FormItem>] -->
-                  <div class="ant-row ant-form-item" style="margin-bottom: 8px;">
-                    <div class="ant-form-item-label ant-col-xs-8">
-                      <label for="" title="">
-                        Show Date
-                      </label>
-                    </div>
-                    <div class="ant-form-item-control-wrapper ant-col-xs-16">
-                      <div class="ant-form-item-control">
-                        <span class="ant-form-item-children">
-                          <span class="ant-form-text">11/11/2018</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <Col> -->
-                <div class="ant-col-12 c-col-padding">
-                  <!-- <FormItem>] -->
-                  <div class="ant-row ant-form-item" style="margin-bottom: 0;">
-                    <div class="ant-form-item-label ant-col-xs-8">
-                      <label for="" title="">
-                        Selectable
-                      </label>
-                    </div>
-                    <div class="ant-form-item-control-wrapper ant-col-xs-16">
-                      <div class="ant-form-item-control">
-                        <div class="ant-select ant-select-enabled">
-                          <div class="ant-select-selection
-                              ant-select-selection--single"
-                            role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"
-                            tabindex="0">
-                            <div class="ant-select-selection__rendered">
-                              <div class="ant-select-selection-selected-value" title="Lucy" style="display: block; opacity: 1;">Lucy</div>
-                            </div>
-                            <span class="ant-select-arrow" style="-moz-user-select: none;" unselectable="on">
-                              <i class="anticon anticon-down ant-select-arrow-icon">
-                                <svg viewBox="64 64 896 896" class=""
-                                  data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                                  <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                                </svg>
-                              </i>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- <Divider /> -->
-          <div class="ant-divider ant-divider-horizontal"></div>
           <!-- <Row type="flex" justify="start"> -->
           <div class="ant-row-flex ant-row-flex-start c-layout-row">
             <div class="c-left-item">
@@ -456,7 +329,7 @@
                                 </button>
                                 <!-- click to make row go down -->
                                 <button type="button" class="ant-btn ant-btn-icon-only ant-btn-circle ant-btn-sm">
-                                  <i class="anticon icon-down"></i>
+                                    <i class="anticon icon-down"></i>
                                 </button>
                               </div>
                             </td>
@@ -507,13 +380,11 @@
                           <tr class="ant-table-row ant-table-row-level-0" data-row-key="1">
                             <td>
                               <div class="c-table-manual-sort">
-                                <!-- click to make row go up -->
                                 <button type="button" class="ant-btn ant-btn-icon-only ant-btn-circle ant-btn-sm">
                                   <i class="anticon icon-up"></i>
                                 </button>
-                                <!-- click to make row go down -->
                                 <button type="button" class="ant-btn ant-btn-icon-only ant-btn-circle ant-btn-sm">
-                                  <i class="anticon icon-down"></i>
+                                    <i class="anticon icon-down"></i>
                                 </button>
                               </div>
                             </td>
@@ -543,13 +414,11 @@
                           <tr class="ant-table-row ant-table-row-level-0" data-row-key="1">
                             <td>
                               <div class="c-table-manual-sort">
-                                <!-- click to make row go up -->
                                 <button type="button" class="ant-btn ant-btn-icon-only ant-btn-circle ant-btn-sm">
                                   <i class="anticon icon-up"></i>
                                 </button>
-                                <!-- click to make row go down -->
                                 <button type="button" class="ant-btn ant-btn-icon-only ant-btn-circle ant-btn-sm">
-                                  <i class="anticon icon-down"></i>
+                                    <i class="anticon icon-down"></i>
                                 </button>
                               </div>
                             </td>

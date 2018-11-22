@@ -41,6 +41,31 @@
   margin-left: 10px;
 }
 
+.c-layout-row .c-ant-form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.c-layout-row .c-ant-form .c-form-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c-col-padding {
+  padding: 0 12px;
+}
+
 .c-layout-title {
   font-size: 14px;
   color: #006e95;
@@ -322,10 +347,6 @@ i.anticon:before {
   background-color: #e8f2f7;
 }
 
-.mt-20 {
-  margin-top: 20px !important;
-}
-
 .c-status {
   width: 10px;
   height: 10px;
@@ -395,10 +416,6 @@ i.anticon:before {
   padding: 0 30px 30px 30px;
 }
 
-.c-login-box-content .c-input-affix-wrapper {
-  margin-bottom: 15px;
-}
-
 .c-exchange-logo img {
   width: 24px;
   height: 24px;
@@ -444,7 +461,7 @@ i.anticon:before {
   outline: none;
 }
 
-.c-input-affix-wrapper .c-btn-link {
+.c-form-item .c-btn-link {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -456,6 +473,7 @@ i.anticon:before {
   color: #868686;
   margin: 20px 0 0 0;
   text-align: center;
+  opacity: 0.7;
 }
 
 .c-copyright-text {

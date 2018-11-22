@@ -45,6 +45,18 @@
       margin-left: 10px;
     }
   }
+  .c-ant-form {
+    @include flexbox();
+    .c-form-row {
+      @include flexbox();
+      width: 100%;
+      @include flex-wrap(wrap);
+    }
+  }
+}
+
+.c-col-padding {
+  padding: 0 12px;
 }
 
 .c-layout-title {
@@ -318,10 +330,6 @@ i.anticon {
   background-color: #e8f2f7;
 }
 
-.mt-20 {
-  margin-top: 20px!important;
-}
-
 .c-status {
   width: 10px;
   height: 10px;
@@ -377,9 +385,6 @@ i.anticon {
 
 .c-login-box-content {
   padding: 0 30px 30px 30px;
-  .c-input-affix-wrapper {
-    margin-bottom: 15px;
-  }
 }
 
 .c-exchange-logo {
@@ -423,7 +428,7 @@ i.anticon {
     outline: none;
   }
 }
-.c-input-affix-wrapper {
+.c-form-item {
   .c-btn-link {
     text-transform: uppercase;
     font-size: 12px;
@@ -437,6 +442,7 @@ i.anticon {
   color: $mute-text-grey;
   margin: 20px 0 0 0;
   text-align: center;
+  opacity: 0.7;
 }
 
 .c-copyright-text {
