@@ -294,6 +294,27 @@ i.anticon:before {
 
 .c-table-tbody > tr > td {
   padding: 8px 16px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c-table.ant-table-bordered .c-table-thead > tr > th,
+.c-table.ant-table-bordered .c-table-tbody > tr > td {
+  border-right: 1px solid #d8d8d8;
+}
+
+.c-table.ant-table-bordered .c-table-thead > tr:not(:last-child) > th {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c-table.ant-table-bordered .ant-table-header > table,
+.c-table.ant-table-bordered .ant-table-body > table,
+.c-table.ant-table-bordered .ant-table-fixed-left table,
+.c-table.ant-table-bordered .ant-table-fixed-right table {
+  border: 1px solid #d8d8d8;
+}
+
+.c-table {
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .c-table-tbody .c-table-column-nodata {
@@ -333,7 +354,7 @@ i.anticon:before {
 }
 
 .c-table-thead .c-top-row-thead th {
-  color: #868686;
+  color: #4a4a49;
 }
 
 .c-table-thead .c-main-row-thead th {
