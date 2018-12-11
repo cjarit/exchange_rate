@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="resources/img/ex_rate_favicon.png" sizes="32x32">
+  <title>Exchange Rate | Admin</title>
+  <link rel="stylesheet" href="./vendors/antdesign/antd.css" />
+  <link rel="stylesheet" href="./vendors/antdesign/iconfont/iconfont.css" />
+  <link rel="stylesheet" href="./resources/css/style.css" />
+</head>
+
+<body>
+  <!-- Layout -->
+  <div class="ant-layout">
+    <!-- Header -->
+    <div class="ant-layout-header c-header">
+      <!-- <Button> (with icon) -->
+      <button class="ant-btn ant-btn-icon-only c-btn-white-10">
+        <i class="anticon icon-menufold"></i>
+        <!-- Toggle .icon-menuunfold when sidebar is invisible -->
+      </button>
+      <div class="c-topbar-logo"></div>
+      <div class="c-divider-vertical"></div>
+      <span class="c-sub-logo">Exchange Rate Admin</span>
+      <!-- <Button> -->
+      <!--
+          ** Please user PopOver function to display User Data and Logout button
+          https://ant.design/components/popover/
+        -->
+      <button class="ant-btn c-btn-white-10 c-user-button">
+        <i class="anticon icon-user"></i> <span>Admin</span>
+        <i class="anticon icon-down"></i>
+      </button>
+    </div>
+    <!-- Layout -->
+    <div class="ant-layout ant-layout-has-sider c-layout">
+      <!-- Sider -->
+      <div class="ant-layout-sider ant-layout-sider-dark c-layout-sider">
+        <div class="ant-layout-sider-children">
+          <!-- Menu -->
+          <ul class="ant-menu ant-menu-light ant-menu-root ant-menu-inline c-menu-sider" role="menu">
+            <li class="ant-menu-item ant-menu-item-selected" role="menuitem">
+              <span>Home</span>
+              <!-- Customise Icon -->
+              <i class="anticon icon-home c-icon-menu"></i>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Counter Rate</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Banknote Setup</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>SB/TT Setup</span>
+            </li>
+            <!-- Use Ant design divider -->
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <!-- Customise Menu title -->
+            <li class="c-menu-title"><span>Travel Card</span></li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>TC Manual</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>TC Auto</span>
+            </li>
+            <!-- Use Ant design divider -->
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <!-- Customise Menu title -->
+            <li class="c-menu-title"><span>BU Admin Setup</span></li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Data Source</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Update Schedule</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Currency Setup</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>E-mail Setup</span>
+            </li>
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Logout</span>
+              <!-- Customise Icon -->
+              <i class="anticon icon-poweroff c-icon-menu"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <Modal> -->
+  <!-- ** See https://ant.design/components/modal/ for more info -->
+  <div>
+    <div>
+      <div class="ant-modal-mask"></div>
+      <div tabindex="-1" class="ant-modal-wrap " role="dialog" style="">
+        <!-- Adjust Modal width -->
+        <div role="document" style="width: 820px; transform-origin: 148.5px 458px 0px;" class="ant-modal">
+          <div class="ant-modal-content">
+            <button aria-label="Close" class="ant-modal-close">
+              <span class="ant-modal-close-x">
+                <i class="anticon icon-close ant-modal-close-icon"></i>
+              </span>
+            </button>
+            <div class="ant-modal-header">
+              <div class="ant-modal-title">Screen Mapping</div>
+            </div>
+            <div class="ant-modal-body">
+              <form>
+                <!-- Custom class c-title-box -->
+                <div class="c-title-box">
+                  <!-- Use class from <Form> (Custom tag) -->
+                  <div class="ant-form ant-form-inline c-form-inline">
+                    <!-- <FormItem> with custom class -->
+                    <div class="ant-row ant-form-item c-form-item c-form-item-bold" style="margin-bottom: 0;">
+                      <div class="ant-form-item-label">
+                        <label class="" title="Role Name">Role Name</label>
+                      </div>
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <span class="ant-form-item-children">
+                            <span class="ant-form-text">GM Trader</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <Table> with .c-table-setup (Table for setting forn) -->
+                <div class="ant-table ant-table-middle ant-table-scroll-position-left c-table-setup">
+                  <div class="ant-table-content">
+                    <div class="ant-table-body">
+                      <table class="">
+                        <colgroup>
+                          <col>
+                          <col>
+                          <col>
+                        </colgroup>
+                        <!-- Custom class c-thead-headless -->
+                        <thead class="ant-table-thead c-thead-headless">
+                          <tr>
+                            <th class="">
+                            </th>
+                            <th class="">
+                              <div>Read</div>
+                            </th>
+                            <th class="">
+                              <div>Write</div>
+                            </th>
+                            <th>
+                              <div>Publish</div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="ant-table-tbody">
+                          <tr class="ant-table-row ant-table-row-level-0" data-row-key="1">
+                            <!-- Custom class to make this td the title .c-td-title -->
+                            <td class="c-td-title">Counter Rate</td>
+                            <td class="">
+                              <!-- <Switch checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} defaultChecked /> -->
+                              <!-- **See https://ant.design/components/switch/ -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="false" class="ant-switch" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-close"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                          </tr>
+                          <tr class="ant-table-row ant-table-row-level-0" data-row-key="1">
+                            <!-- Custom class to make this td the title .c-td-title -->
+                            <td class="c-td-title">Travel Card</td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="false" class="ant-switch" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-close"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                          </tr>
+                          <!-- This row is title that have children -->
+                          <tr class="ant-table-row ant-table-row-level-0" data-row-key="4">
+                            <!-- 2 Custom classes -->
+                            <td class="c-td-title c-table-row-title" colspan="4">
+                              <span style="padding-left: 0px;" class="ant-table-row-indent indent-level-0"></span>
+                              <div>Spread Setup</div>
+                            </td>
+                          </tr>
+                          <!-- Children Row -->
+                          <tr class="ant-table-row ant-table-row-level-1" data-row-key="1">
+                            <td class="">
+                              <span style="padding-left: 20px;" class="ant-table-row-indent indent-level-0"></span>
+                              Bank Note
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                                <button type="button" role="switch" aria-checked="false" class="ant-switch" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-close"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                          </tr>
+                          <!-- Children Row -->
+                          <tr class="ant-table-row ant-table-row-level-1" data-row-key="1">
+                            <td class="">
+                              <span style="padding-left: 20px;" class="ant-table-row-indent indent-level-1"></span>
+                              Other 2nd Title
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                                <button type="button" role="switch" aria-checked="false" class="ant-switch" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-close"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                          </tr>
+                          <tr class="ant-table-row ant-table-row-level-0" data-row-key="1">
+                            <!-- Custom class to make this td the title .c-td-title -->
+                            <td class="c-td-title">Other Title</td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                              <button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-check"><svg viewBox="64 64 896 896" class="" data-icon="check" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                            <td class="">
+                              <!-- <Switch> -->
+                                <button type="button" role="switch" aria-checked="false" class="ant-switch" ant-click-animating="true"><span class="ant-switch-inner"><i class="anticon anticon-close"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span><div class="ant-click-animating-node"></div></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- <Row> Justify Center -->
+                <div class="ant-row-flex ant-row-flex-center">
+                  <!-- <Button> (Save for all editing / Not display if not use) -->
+                  <button type="button" class="ant-btn c-btn-primary ant-btn-lg" style="margin-right: 15px; min-width: 100px;">
+                    <span>Save</span>
+                  </button>
+                  <!-- <Button> -->
+                  <button type="button" class="ant-btn c-btn-primary-ghost ant-btn-lg" style="min-width: 100px;">
+                    <span>Cancel</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
