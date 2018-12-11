@@ -45,12 +45,14 @@ body {
   }
 
   .c-right-item {
+    margin-left: auto;
     button {
       margin-left: 10px;
     }
   }
   .c-ant-form {
     @include flexbox();
+    @include flex-direction(column);
     .c-form-row {
       @include flexbox();
       width: 100%;
@@ -181,6 +183,50 @@ i.anticon {
   }
 }
 
+.c-btn-link {
+  background: none !important;
+  border: 0!important;
+  span {
+    color: $mute-text-grey;
+    text-decoration: underline;
+  }
+  &:hover {
+    span {
+      color: $ktb-blue;
+    }
+  }
+}
+
+.c-btn-link-secondary {
+  span {
+    color: $mute-text-grey;
+    text-decoration: underline;
+  }
+  &:hover {
+    span {
+      color: $ktb-blue;
+    }
+  }
+}
+
+.c-btn-link-danger {
+  span {
+    color: $red;
+    text-decoration: underline;
+  }
+  i {
+    color: $red;
+  }
+  &:hover {
+    span {
+      color: $text-red;
+    }
+    i {
+      color: $text-red;
+    }
+  }
+}
+
 .c-divider-vertical {
   min-height: 14px;
   width: 1px;
@@ -300,6 +346,13 @@ i.anticon {
 .c-table-tbody {
   .c-table-column-nodata {
     background-color: #e8e8e8!important;
+  }
+  .c-table-click-data {
+    text-decoration: underline;
+    color: $ktb-blue-darker;
+    &:hover {
+      color: $ktb-dark-blue;
+    }
   }
 }
 
@@ -484,4 +537,76 @@ i.anticon {
 .c-copyright-text {
   margin: 40px 0;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.c-title-box {
+  padding: 2px;
+  background-color: $page-grey-bg;
+  margin-bottom: 20px;
+}
+
+.ant-switch-inner {
+  .anticon {
+    font-size: 12px;
+  }
+}
+
+.c-table-setup {
+  margin-bottom: 25px;
+  thead {
+    tr {
+      th {
+        color: $text-black;
+        //border-color: $border-grey
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:hover {
+        td {
+          background: none!important;
+        }
+      }
+      td {
+        color: $text-black;
+        //border-color: $border-grey;
+        &.c-table-row-title {
+          background-color: $page-grey-bg!important;
+        }
+      }
+    }
+  }
+  .ant-table-row {
+    .c-td-title {
+      font-weight: bold;
+    }
+  }
+  .c-thead-headless {
+    tr {
+      th {
+        background: none;
+      }
+    }
+  }
+}
+
+.c-form-inline {
+  .c-form-item {
+    margin-left: 16px;
+    &.c-form-item-bold {
+      label {
+        //font-size: 16px;
+        font-weight: bold;
+        color: $mute-text-grey;
+      }
+      .ant-form-item-control {
+        span {
+          //font-size: 16px;
+          font-weight: bold;
+          color: $text-black;
+        }
+      }
+    }
+  }
 }
