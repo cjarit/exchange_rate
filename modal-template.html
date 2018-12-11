@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="resources/img/ex_rate_favicon.png" sizes="32x32">
+  <title>Exchange Rate | Admin</title>
+  <link rel="stylesheet" href="./vendors/antdesign/antd.css" />
+  <link rel="stylesheet" href="./vendors/antdesign/iconfont/iconfont.css" />
+  <link rel="stylesheet" href="./resources/css/style.css" />
+</head>
+
+<body>
+  <!-- Layout -->
+  <div class="ant-layout">
+    <!-- Header -->
+    <div class="ant-layout-header c-header">
+      <!-- <Button> (with icon) -->
+      <button class="ant-btn ant-btn-icon-only c-btn-white-10">
+        <i class="anticon icon-menufold"></i>
+        <!-- Toggle .icon-menuunfold when sidebar is invisible -->
+      </button>
+      <div class="c-topbar-logo"></div>
+      <div class="c-divider-vertical"></div>
+      <span class="c-sub-logo">Exchange Rate Admin</span>
+      <!-- <Button> -->
+      <!--
+          ** Please user PopOver function to display User Data and Logout button
+          https://ant.design/components/popover/
+        -->
+      <button class="ant-btn c-btn-white-10 c-user-button">
+        <i class="anticon icon-user"></i> <span>Admin</span>
+        <i class="anticon icon-down"></i>
+      </button>
+    </div>
+    <!-- Layout -->
+    <div class="ant-layout ant-layout-has-sider c-layout">
+      <!-- Sider -->
+      <div class="ant-layout-sider ant-layout-sider-dark c-layout-sider">
+        <div class="ant-layout-sider-children">
+          <!-- Menu -->
+          <ul class="ant-menu ant-menu-light ant-menu-root ant-menu-inline c-menu-sider" role="menu">
+            <li class="ant-menu-item ant-menu-item-selected" role="menuitem">
+              <span>Home</span>
+              <!-- Customise Icon -->
+              <i class="anticon icon-home c-icon-menu"></i>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Counter Rate</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Banknote Setup</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>SB/TT Setup</span>
+            </li>
+            <!-- Use Ant design divider -->
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <!-- Customise Menu title -->
+            <li class="c-menu-title"><span>Travel Card</span></li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>TC Manual</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>TC Auto</span>
+            </li>
+            <!-- Use Ant design divider -->
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <!-- Customise Menu title -->
+            <li class="c-menu-title"><span>BU Admin Setup</span></li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Data Source</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Update Schedule</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Currency Setup</span>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>E-mail Setup</span>
+            </li>
+            <li>
+              <div class="ant-divider ant-divider-horizontal"></div>
+            </li>
+            <li class="ant-menu-item" role="menuitem">
+              <span>Logout</span>
+              <!-- Customise Icon -->
+              <i class="anticon icon-poweroff c-icon-menu"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <Modal> -->
+  <!-- ** See https://ant.design/components/modal/ for more info -->
+  <div>
+    <div>
+      <div class="ant-modal-mask"></div>
+      <div tabindex="-1" class="ant-modal-wrap " role="dialog" style="">
+        <!-- Adjust Modal width -->
+        <div role="document" style="width: 620px; transform-origin: 148.5px 458px 0px;" class="ant-modal">
+          <div class="ant-modal-content">
+            <button aria-label="Close" class="ant-modal-close">
+              <span class="ant-modal-close-x">
+                <i class="anticon icon-close ant-modal-close-icon"></i>
+              </span>
+            </button>
+            <div class="ant-modal-header">
+              <div class="ant-modal-title">Modal Title</div>
+            </div>
+            <div class="ant-modal-body">
+              <!-- <Form> -->
+              <!-- ** https://ant.design/components/form/ -->
+              <form class="ant-form ant-form-horizontal">
+                <!-- <FormItem> Input text -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label class="" title="">Input Text</label>
+                  </div>
+                  <div class="ant-col-14 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <input placeholder="input placeholder" type="text" class="ant-input">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Input text Req*** -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label class="ant-form-item-required" title="">Input Text(Req)</label>
+                  </div>
+                  <div class="ant-col-14 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <input placeholder="input placeholder" type="text" class="ant-input">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Input text with Checkable data -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-form-item-label ant-col-6">
+                    <label for="" class="" title="">Check Data</label>
+                  </div>
+                  <div class="ant-form-item-control-wrapper ant-col-14">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <div class="ant-row" style="margin-left: -4px; margin-right: -4px;">
+                          <div style="padding-left: 4px; padding-right: 4px;" class="ant-col-12">
+                            <input type="text" id="" class="ant-input" value=""></div>
+                          <div style="padding-left: 4px; padding-right: 4px;" class="ant-col-12">
+                            <button type="button" class="ant-btn">
+                              <span>Lookup</span>
+                            </button>
+                          </div>
+                        </div>
+                      </span>
+                      <div class="ant-form-extra">Some text to explain</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Select Option -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label for="select" class="" title="Select">Select</label>
+                  </div>
+                  <div class="ant-col-14 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <div id="select" class="ant-select ant-select-enabled">
+                          <div class="ant-select-selection ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-controls="ffb8929f-a4b0-4868-cc22-ba1ff450cf2b" aria-expanded="false" tabindex="0">
+                            <div class="ant-select-selection__rendered">
+                              <div style="display: block; -moz-user-select: none;" unselectable="on" class="ant-select-selection__placeholder">Please select...</div>
+                            </div>
+                            <span class="ant-select-arrow" style="-moz-user-select: none;" unselectable="on">
+                              <i class="anticon icon-down ant-select-arrow-icon"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Short Input text -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label class="" title="">Short Input</label>
+                  </div>
+                  <div class="ant-col-8 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <input placeholder="input placeholder" type="text" class="ant-input">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Switch -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label for="switch" class="" title="Switch">Radio (Swich)</label>
+                  </div>
+                  <div class="ant-col-14 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <button id="switch"  type="button" role="switch" aria-checked="false" class="ant-switch">
+                          <span class="ant-switch-inner"></span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Radio Button-->
+                <div class="ant-row ant-form-item">
+                  <div class="ant-col-6 ant-form-item-label">
+                    <label for="radio-group" class="" title="Radio.Group">Radio.Group</label>
+                  </div>
+                  <div class="ant-col-14 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <div class="ant-radio-group ant-radio-group-outline" id="radio-group">
+                          <label class="ant-radio-wrapper">
+                            <span class="ant-radio">
+                              <input type="radio" class="ant-radio-input" value="a">
+                              <span class="ant-radio-inner"></span>
+                            </span>
+                            <span>item 1</span>
+                          </label>
+                          <label class="ant-radio-wrapper">
+                            <span class="ant-radio">
+                              <input type="radio" class="ant-radio-input" value="b">
+                              <span class="ant-radio-inner"></span>
+                            </span>
+                            <span>item 2</span>
+                          </label>
+                          <label class="ant-radio-wrapper">
+                            <span class="ant-radio">
+                              <input type="radio" class="ant-radio-input" value="c">
+                              <span class="ant-radio-inner"></span>
+                            </span>
+                            <span>item 3</span>
+                          </label>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <FormItem> Submit Button -->
+                <div class="ant-row ant-form-item" style="margin-bottom: 10px;">
+                  <div class="ant-col-14 ant-col-offset-6 ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control">
+                      <span class="ant-form-item-children">
+                        <button type="button" class="ant-btn c-btn-primary" style="margin-right: 10px;">
+                          <span>Submit</span>
+                        </button>
+                        <button type="button" class="ant-btn c-btn-primary-ghost">
+                          <span>Cancel</span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
